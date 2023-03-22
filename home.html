@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun()
+        {
+            hlr=document.getElementsByTagName("h1")[0]
+            hlr.innerHTML=hlr.innerHTML+" "+localStorage.getItem("name")
+
+        }
+        setTimeout (fun,500)
+        function fun1()
+        {
+            localStorage.removeItem("uid")
+            localStorage.removeItem("pwd")
+            localStorage.removeItem("name")
+            window.location="shiv.html"
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+       <a href="shiv.html">Register</a>
+       <a href="login.html">Login</a>
+    </nav>
+    <h1>home page of</h1>
+    <button onclick="fun1()">Remouser</button>
+    
+</body>
+</html>

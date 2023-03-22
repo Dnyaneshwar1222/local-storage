@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(event)
+        {
+            event.preventDefault()
+            let itr=document.getElementsByTagName("input")
+            let uuid=itr[0].value
+            let upwd=itr[1].value
+            uid=localStorage.getItem("uid")
+            pwd=localStorage.getItem("pwd")
+            if(uuid==uid && upwd==pwd)
+            {
+                window.location="home.html"
+            }
+            else
+            {
+                window.location="shiv.html"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="shiv.html">Register</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <form onsubmit="fun(event)">
+        <input type="text" name="uid"/>
+        <input type="password" name="pwd"/>
+        <input type="submit" name="login"/>
+
+    </form>
+    
+</body>
+</html>
